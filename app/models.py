@@ -20,6 +20,7 @@ class User(UserMixin,db.Model):
     error = db.relationship('Error',backref='user',lazy='dynamic')
     solution = db.relationship('Solution',backref='user',lazy='dynamic')
     photo = db.relationship('Photo',backref='user',lazy='dynamic')
+    
 
     @property
     def password(self):
